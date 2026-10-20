@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>City Safar | Public Transport Management</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-bus"></i>
+            City Safar
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html" class="active">Home</a></li>
+
+            <li><a href="#routes">Bus Routes</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#about">About Us</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <div class="nav-buttons">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Travel Smart with
+            <span>City Safar</span>
+        </h1>
+
+        <p>
+            Your trusted public transport partner.
+            Find buses, explore routes, and enjoy
+            a comfortable journey across the city.
+        </p>
+
+        <a href="#search" class="hero-btn">
+            <i class="fa-solid fa-bus"></i>
+            Find Your Bus
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SEARCH BUS SECTION -->
+
+<section class="search-section" id="search">
+
+    <div class="search-box">
+
+        <h2>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search Your Bus
+        </h2>
+
+        <p>Find the best bus for your journey</p>
+
+        <form class="search-form">
+
+            <div class="input-group">
+
+                <label>From</label>
+
+                <select required>
+                    <option value="">Select Starting Point</option>
+                    <option>Ahmedabad</option>
+                    <option>Surat</option>
+                    <option>Vadodara</option>
+                    <option>Rajkot</option>
+                    <option>Gandhinagar</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>To</label>
+
+                <select required>
+                    <option value="">Select Destination</option>
+                    <option>Ahmedabad</option>
+                    <option>Surat</option>
+                    <option>Vadodara</option>
+                    <option>Rajkot</option>
+                    <option>Gandhinagar</option>
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Journey Date</label>
+
+                <input type="date" required>
+
+            </div>
+
+            <button type="submit" class="search-btn">
+
+                <i class="fa-solid fa-search"></i>
+                Search Bus
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- POPULAR ROUTES -->
+
+<section class="routes-section" id="routes">
+
+    <h2 class="section-title">
+        Popular Bus Routes
+    </h2>
+
+    <p class="section-subtitle">
+        Explore the most traveled routes with City Safar
+    </p>
+
+    <div class="routes-container">
+
+        <!-- ROUTE 1 -->
+
+        <div class="route-card">
+
+            <div class="route-icon">
+                <i class="fa-solid fa-bus"></i>
+            </div>
+
+            <h3>Ahmedabad → Surat</h3>
+
+            <p>
+                <i class="fa-regular fa-clock"></i>
+                Duration: 4 Hours
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Distance: 265 KM
+            </p>
+
+            <h4>₹350</h4>
+
+            <a href="login.html" class="book-btn">
+                Book Ticket
+            </a>
+
+        </div>
+
+
+        <!-- ROUTE 2 -->
+
+        <div class="route-card">
+
+            <div class="route-icon">
+                <i class="fa-solid fa-bus"></i>
+            </div>
+
+            <h3>Ahmedabad → Vadodara</h3>
+
+            <p>
+                <i class="fa-regular fa-clock"></i>
+                Duration: 2 Hours
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Distance: 110 KM
+            </p>
+
+            <h4>₹180</h4>
+
+            <a href="login.html" class="book-btn">
+                Book Ticket
+            </a>
+
+        </div>
+
+
+        <!-- ROUTE 3 -->
+
+        <div class="route-card">
+
+            <div class="route-icon">
+                <i class="fa-solid fa-bus"></i>
+            </div>
+
+            <h3>Surat → Rajkot</h3>
+
+            <p>
+                <i class="fa-regular fa-clock"></i>
+                Duration: 6 Hours
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Distance: 350 KM
+            </p>
+
+            <h4>₹450</h4>
+
+            <a href="login.html" class="book-btn">
+                Book Ticket
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES SECTION -->
+
+<section class="services-section" id="services">
+
+    <h2 class="section-title">
+        Why Choose City Safar?
+    </h2>
+
+    <p class="section-subtitle">
+        Making public transportation easier and smarter
+    </p>
+
+    <div class="services-container">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-bus-simple"></i>
+
+            <h3>Easy Bus Search</h3>
+
+            <p>
+                Find available buses and routes
+                quickly and easily.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-ticket"></i>
+
+            <h3>Online Booking</h3>
+
+            <p>
+                Book your bus tickets online
+                without standing in queues.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h3>Bus Timings</h3>
+
+            <p>
+                Check bus schedules and plan
+                your journey conveniently.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>Safe Travel</h3>
+
+            <p>
+                Enjoy reliable and comfortable
+                public transportation services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT SECTION -->
+
+<section class="about-section" id="about">
+
+    <div class="about-content">
+
+        <h2>About City Safar</h2>
+
+        <p>
+            City Safar is a Public Transport Management
+            System designed to make daily transportation
+            easier, faster, and more convenient.
+        </p>
+
+        <p>
+            Our platform helps passengers search bus routes,
+            check schedules, book tickets, and manage
+            their journeys from one place.
+        </p>
+
+        <a href="#services" class="about-btn">
+            Explore Services
+        </a>
+
+    </div>
+
+    <div class="about-image">
+
+        <i class="fa-solid fa-bus"></i>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h3>
+                <i class="fa-solid fa-bus"></i>
+                City Safar
+            </h3>
+
+            <p>
+                Making your daily journey
+                easier, safer, and smarter.
+            </p>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="#routes">Bus Routes</a>
+
+            <a href="#services">Services</a>
+
+            <a href="login.html">Login</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                support@citysafar.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 9876543210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Gujarat, India
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 City Safar.
+            All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

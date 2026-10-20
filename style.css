@@ -1,0 +1,211 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    min-height: 100vh;
+}
+
+/* Main Container */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Form Box */
+
+.form-box {
+    background: white;
+    padding: 35px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+
+.logo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+
+h2 {
+    text-align: center;
+    color: #023e8a;
+    margin-bottom: 8px;
+}
+
+/* Subtitle */
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Input Groups */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+/* Inputs */
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Focus */
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0,119,182,0.2);
+}
+
+/* Textarea */
+
+textarea {
+    resize: none;
+}
+
+/* Terms */
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+
+.btn {
+    width: 100%;
+    padding: 13px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+
+.btn:hover {
+    background: #023e8a;
+    transform: translateY(-2px);
+}
+
+/* Bottom Text */
+
+.bottom-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.bottom-text a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bottom-text a:hover {
+    text-decoration: underline;
+}
+
+/* Login Page */
+
+.login-box {
+    max-width: 420px;
+}
+
+/* Login Options */
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.login-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.login-options a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.login-options a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+
+    .form-box {
+        padding: 25px 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .login-options {
+        font-size: 11px;
+    }
+
+}
