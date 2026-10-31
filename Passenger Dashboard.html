@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Passenger Dashboard | City Safar</title>
+
+    <link rel="stylesheet" href="PD.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+        <i class="fa-solid fa-bus"></i>
+        City Safar
+    </div>
+
+    <div class="menu">
+
+        <a href="#" class="active" onclick="showSection('dashboard', this)">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a href="#" onclick="showSection('search', this)">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Search Bus
+        </a>
+
+        <a href="#" onclick="showSection('booking', this)">
+            <i class="fa-solid fa-ticket"></i>
+            Book Ticket
+        </a>
+
+        <a href="#" onclick="showSection('mybookings', this)">
+            <i class="fa-solid fa-list"></i>
+            My Bookings
+        </a>
+
+        <a href="#" onclick="showSection('profile', this)">
+            <i class="fa-solid fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="login.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+    <!-- TOP NAVBAR -->
+
+    <div class="topbar">
+
+        <h2>Passenger Dashboard</h2>
+
+        <div class="user-info">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Passenger</span>
+        </div>
+
+    </div>
+
+
+    <!-- DASHBOARD SECTION -->
+
+    <section id="dashboard" class="content-section active-section">
+
+        <div class="welcome-box">
+
+            <h2>Welcome to City Safar! 🚌</h2>
+
+            <p>
+                Manage your bus journeys, book tickets,
+                and explore routes easily.
+            </p>
+
+        </div>
+
+
+        <!-- DASHBOARD CARDS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon blue">
+                    <i class="fa-solid fa-bus"></i>
+                </div>
+
+                <h3>Available Buses</h3>
+
+                <h2>25</h2>
+
+                <p>Explore available buses</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon green">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+
+                <h3>My Bookings</h3>
+
+                <h2 id="totalBookings">0</h2>
+
+                <p>Total booked tickets</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon orange">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <h3>Bus Routes</h3>
+
+                <h2>12</h2>
+
+                <p>Available routes</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="quick-actions">
+
+            <h3>Quick Actions</h3>
+
+            <div class="action-buttons">
+
+                <button onclick="showSection('search')">
+                    <i class="fa-solid fa-search"></i>
+                    Search Bus
+                </button>
+
+                <button onclick="showSection('booking')">
+                    <i class="fa-solid fa-ticket"></i>
+                    Book Ticket
+                </button>
+
+                <button onclick="showSection('mybookings')">
+                    <i class="fa-solid fa-list"></i>
+                    View Bookings
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH BUS SECTION -->
+
+    <section id="search" class="content-section">
+
+        <h2>Search Available Buses</h2>
+
+        <div class="form-container">
+
+            <form id="searchForm">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>From City</label>
+
+                        <select id="searchFrom" required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>To City</label>
+
+                        <select id="searchTo" required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Journey Date</label>
+
+                    <input type="date" id="searchDate" required>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Search Bus
+                </button>
+
+            </form>
+
+        </div>
+
+        <div id="searchResults"></div>
+
+    </section>
+
+
+    <!-- BOOK TICKET SECTION -->
+
+    <section id="booking" class="content-section">
+
+        <h2>Book Your Bus Ticket</h2>
+
+        <div class="form-container">
+
+            <form id="bookingForm">
+
+                <div class="input-group">
+
+                    <label>Passenger Name</label>
+
+                    <input type="text"
+                           id="passengerName"
+                           placeholder="Enter passenger name"
+                           required>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>From City</label>
+
+                        <select id="fromCity" required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>To City</label>
+
+                        <select id="toCity" required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Journey Date</label>
+
+                    <input type="date" id="journeyDate" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Select Bus</label>
+
+                    <select id="busType" required>
+
+                        <option value="">Select Bus</option>
+
+                        <option value="Express Bus">
+                            Express Bus
+                        </option>
+
+                        <option value="AC Bus">
+                            AC Bus
+                        </option>
+
+                        <option value="Local Bus">
+                            Local Bus
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SEAT SELECTION -->
+
+                <h3>Select Your Seat</h3>
+
+                <p class="seat-info">
+                    Click on an available seat to select it.
+                </p>
+
+                <div class="bus-layout">
+
+                    <div class="driver">
+                        <i class="fa-solid fa-steering-wheel"></i>
+                        Driver
+                    </div>
+
+                    <div class="seat-container" id="seatContainer">
+
+                    </div>
+
+                </div>
+
+                <p class="selected-seat">
+                    Selected Seat:
+                    <strong id="selectedSeatText">None</strong>
+                </p>
+
+                <button type="submit" class="primary-btn">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- MY BOOKINGS SECTION -->
+
+    <section id="mybookings" class="content-section">
+
+        <h2>My Bookings</h2>
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Passenger</th>
+                        <th>Route</th>
+                        <th>Date</th>
+                        <th>Bus</th>
+                        <th>Seat</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="bookingTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFILE SECTION -->
+
+    <section id="profile" class="content-section">
+
+        <h2>My Profile</h2>
+
+        <div class="profile-card">
+
+            <div class="profile-icon">
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
+
+            <h3>Passenger Profile</h3>
+
+            <div class="profile-details">
+
+                <p>
+                    <strong>Name:</strong>
+                    Passenger
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    passenger@example.com
+                </p>
+
+                <p>
+                    <strong>Mobile:</strong>
+                    9876543210
+                </p>
+
+                <p>
+                    <strong>Account Type:</strong>
+                    Passenger
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
