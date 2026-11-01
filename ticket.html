@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket | City Safar</title>
+    <link rel="stylesheet" href="passenger.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-bus"></i>
+        <span>City Safar</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a href="ticket.html" class="active">
+            <i class="fa-solid fa-ticket"></i>
+            Book Ticket
+        </a>
+
+        <a href="bookings.html">
+            <i class="fa-solid fa-list-check"></i>
+            My Bookings
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="../login.html" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <h1 class="topbar-title">Book Ticket</h1>
+
+        <div class="topbar-user">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Ahmed Ali</span>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <!-- STEP 1 : SEARCH BUS -->
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Step 1 : Search Bus
+                </h3>
+            </div>
+
+            <div class="card-body">
+
+                <form class="form-grid-3" id="searchForm">
+
+                    <div class="form-group">
+                        <label>From City</label>
+                        <select required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                            <option>Bhavnagar</option>
+                            <option>Jamnagar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>To City</label>
+                        <select required>
+                            <option value="">Select City</option>
+                            <option>Ahmedabad</option>
+                            <option>Surat</option>
+                            <option>Vadodara</option>
+                            <option>Rajkot</option>
+                            <option>Gandhinagar</option>
+                            <option>Bhavnagar</option>
+                            <option>Jamnagar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Journey Date</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="form-group btn-group">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-search"></i>
+                            Search Buses
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 2 : AVAILABLE BUSES -->
+
+        <div class="card" id="busResults">
+
+            <div class="card-header">
+                <h3>
+                    <i class="fa-solid fa-bus"></i>
+                    Step 2 : Available Buses
+                </h3>
+            </div>
+
+            <div class="card-body">
+
+                <div class="bus-list">
+
+                    <!-- BUS 1 -->
+
+                    <div class="bus-item">
+
+                        <div class="bus-info">
+
+                            <h4>
+                                <i class="fa-solid fa-bus"></i>
+                                City Safar Express
+                            </h4>
+
+                            <div class="bus-details">
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    06:00 AM
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    10:00 AM
+                                </span>
+
+                                <span class="bus-tag ac">
+                                    AC
+                                </span>
+
+                                <span class="bus-tag seats-tag">
+                                    18 Seats
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bus-price">
+
+                            <h3>₹350</h3>
+
+                            <a href="#bookingSection" class="btn btn-primary btn-sm">
+                                Select
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUS 2 -->
+
+                    <div class="bus-item">
+
+                        <div class="bus-info">
+
+                            <h4>
+                                <i class="fa-solid fa-bus"></i>
+                                City Safar Deluxe
+                            </h4>
+
+                            <div class="bus-details">
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    08:30 AM
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    12:30 PM
+                                </span>
+
+                                <span class="bus-tag nonac">
+                                    Non-AC
+                                </span>
+
+                                <span class="bus-tag seats-tag">
+                                    25 Seats
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bus-price">
+
+                            <h3>₹200</h3>
+
+                            <a href="#bookingSection" class="btn btn-primary btn-sm">
+                                Select
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUS 3 -->
+
+                    <div class="bus-item">
+
+                        <div class="bus-info">
+
+                            <h4>
+                                <i class="fa-solid fa-bus"></i>
+                                City Safar Super AC
+                            </h4>
+
+                            <div class="bus-details">
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    02:00 PM
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    06:00 PM
+                                </span>
+
+                                <span class="bus-tag ac">
+                                    AC
+                                </span>
+
+                                <span class="bus-tag seats-tag">
+                                    12 Seats
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bus-price">
+
+                            <h3>₹500</h3>
+
+                            <a href="#bookingSection" class="btn btn-primary btn-sm">
+                                Select
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STEP 3 : SEAT SELECTION & BOOKING -->
+
+        <div class="card" id="bookingSection">
+
+            <div class="card-header">
+                <h3>
+                    <i class="fa-solid fa-chair"></i>
+                    Step 3 : Select Seat & Book
+                </h3>
+            </div>
+
+            <div class="card-body">
+
+                <div class="booking-layout">
+
+                    <!-- LEFT : SEAT MAP -->
+
+                    <div class="seat-map-box">
+
+                        <h4>Bus Seat Layout</h4>
+
+                        <div class="seat-legend">
+
+                            <span>
+                                <span class="legend-box available"></span>
+                                Available
+                            </span>
+
+                            <span>
+                                <span class="legend-box selected"></span>
+                                Selected
+                            </span>
+
+                            <span>
+                                <span class="legend-box booked"></span>
+                                Booked
+                            </span>
+
+                        </div>
+
+                        <div class="bus-frame">
+
+                            <div class="driver-area">
+                                <i class="fa-solid fa-dharmachakra"></i>
+                                Driver
+                            </div>
+
+                            <div class="seats-grid">
+
+                                <button class="seat" data-seat="A1">A1</button>
+                                <button class="seat" data-seat="A2">A2</button>
+                                <div class="aisle"></div>
+                                <button class="seat" data-seat="A3">A3</button>
+                                <button class="seat" data-seat="A4">A4</button>
+
+                                <button class="seat" data-seat="B1">B1</button>
+                                <button class="seat booked" data-seat="B2">B2</button>
+                                <div class="aisle"></div>
+                                <button class="seat" data-seat="B3">B3</button>
+                                <button class="seat booked" data-seat="B4">B4</button>
+
+                                <button class="seat" data-seat="C1">C1</button>
+                                <button class="seat" data-seat="C2">C2</button>
+                                <div class="aisle"></div>
+                                <button class="seat booked" data-seat="C3">C3</button>
+                                <button class="seat" data-seat="C4">C4</button>
+
+                                <button class="seat" data-seat="D1">D1</button>
+                                <button class="seat" data-seat="D2">D2</button>
+                                <div class="aisle"></div>
+                                <button class="seat" data-seat="D3">D3</button>
+                                <button class="seat" data-seat="D4">D4</button>
+
+                                <button class="seat" data-seat="E1">E1</button>
+                                <button class="seat" data-seat="E2">E2</button>
+                                <div class="aisle"></div>
+                                <button class="seat" data-seat="E3">E3</button>
+                                <button class="seat" data-seat="E4">E4</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT : PASSENGER FORM -->
+
+                    <div class="passenger-form-box">
+
+                        <h4>Passenger Details</h4>
+
+                        <form id="bookingForm">
+
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text"
+                                       value="Ahmed Ali"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mobile Number</label>
+                                <input type="tel"
+                                       value="9876543210"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email"
+                                       value="ahmed@example.com"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Age</label>
+                                <input type="number"
+                                       placeholder="Enter age"
+                                       min="1" max="120"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select required>
+                                    <option value="">Select</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>
+                                    Selected Seat
+                                </label>
+                                <input type="text"
+                                       id="seatInput"
+                                       placeholder="Click a seat"
+                                       readonly
+                                       required>
+                            </div>
+
+                            <div class="booking-summary">
+
+                                <p>
+                                    <span>Bus:</span>
+                                    City Safar Express
+                                </p>
+
+                                <p>
+                                    <span>Route:</span>
+                                    Ahmedabad → Surat
+                                </p>
+
+                                <p>
+                                    <span>Date:</span>
+                                    15 Jan 2026
+                                </p>
+
+                                <p class="total-price">
+                                    <span>Total:</span>
+                                    ₹350
+                                </p>
+
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-full">
+
+                                <i class="fa-solid fa-check-circle"></i>
+                                Confirm Booking
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script>
+
+// SEAT SELECTION
+
+const seats = document.querySelectorAll('.seat:not(.booked)');
+
+seats.forEach(seat => {
+
+    seat.addEventListener('click', function() {
+
+        seats.forEach(s => s.classList.remove('selected'));
+
+        this.classList.add('selected');
+
+        document.getElementById('seatInput').value =
+            this.dataset.seat;
+
+    });
+
+});
+
+
+// BOOKING FORM
+
+document.getElementById('bookingForm')
+    .addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const seatVal = document.getElementById('seatInput').value;
+
+    if (!seatVal) {
+        alert('Please select a seat!');
+        return;
+    }
+
+    alert('🎉 Ticket Booked Successfully!\n\nSeat: '
+        + seatVal);
+
+    window.location.href = 'bookings.html';
+
+});
+
+</script>
+
+</body>
+</html>
