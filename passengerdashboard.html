@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | City Safar</title>
+    <link rel="stylesheet" href="passenger.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-bus"></i>
+        <span>City Safar</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html" class="active">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a href="ticket.html">
+            <i class="fa-solid fa-ticket"></i>
+            Book Ticket
+        </a>
+
+        <a href="bookings.html">
+            <i class="fa-solid fa-list-check"></i>
+            My Bookings
+        </a>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="../login.html" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <h1 class="topbar-title">Dashboard</h1>
+
+        <div class="topbar-user">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Ahmed Ali</span>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <!-- WELCOME -->
+
+        <div class="welcome-banner">
+
+            <div class="welcome-text">
+
+                <h2>Welcome Back, Ahmed! 👋</h2>
+
+                <p>
+                    Manage your journeys, book tickets,
+                    and travel smart with City Safar.
+                </p>
+
+                <a href="ticket.html" class="btn btn-light">
+                    <i class="fa-solid fa-ticket"></i>
+                    Book a Ticket
+                </a>
+
+            </div>
+
+            <div class="welcome-icon">
+                <i class="fa-solid fa-bus-simple"></i>
+            </div>
+
+        </div>
+
+
+        <!-- STATS CARDS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+
+                <div class="stat-info">
+                    <h3>Total Bookings</h3>
+                    <h2>12</h2>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div class="stat-info">
+                    <h3>Completed</h3>
+                    <h2>9</h2>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div class="stat-info">
+                    <h3>Upcoming</h3>
+                    <h2>2</h2>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-ban"></i>
+                </div>
+
+                <div class="stat-info">
+                    <h3>Cancelled</h3>
+                    <h2>1</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RECENT BOOKINGS -->
+
+        <div class="card">
+
+            <div class="card-header">
+                <h3>Recent Bookings</h3>
+                <a href="bookings.html" class="link">
+                    View All
+                </a>
+            </div>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Route</th>
+                            <th>Date</th>
+                            <th>Bus</th>
+                            <th>Seat</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#CS1001</td>
+                            <td>Ahmedabad → Surat</td>
+                            <td>15 Jan 2026</td>
+                            <td>AC Bus</td>
+                            <td>A5</td>
+                            <td>
+                                <span class="badge confirmed">
+                                    Confirmed
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CS1002</td>
+                            <td>Surat → Vadodara</td>
+                            <td>12 Jan 2026</td>
+                            <td>Express</td>
+                            <td>B3</td>
+                            <td>
+                                <span class="badge completed">
+                                    Completed
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>#CS1003</td>
+                            <td>Rajkot → Ahmedabad</td>
+                            <td>08 Jan 2026</td>
+                            <td>Local</td>
+                            <td>C7</td>
+                            <td>
+                                <span class="badge cancelled">
+                                    Cancelled
+                                </span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="quick-grid">
+
+            <a href="ticket.html" class="quick-card">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h4>Search Bus</h4>
+                <p>Find available buses</p>
+
+            </a>
+
+            <a href="ticket.html" class="quick-card">
+
+                <i class="fa-solid fa-ticket"></i>
+                <h4>Book Ticket</h4>
+                <p>Book your journey</p>
+
+            </a>
+
+            <a href="bookings.html" class="quick-card">
+
+                <i class="fa-solid fa-list-check"></i>
+                <h4>My Bookings</h4>
+                <p>View all tickets</p>
+
+            </a>
+
+            <a href="profile.html" class="quick-card">
+
+                <i class="fa-solid fa-user-pen"></i>
+                <h4>Edit Profile</h4>
+                <p>Update your info</p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+</body>
+</html>
