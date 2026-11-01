@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | City Safar</title>
+    <link rel="stylesheet" href="passenger.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-bus"></i>
+        <span>City Safar</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+
+        <a href="ticket.html">
+            <i class="fa-solid fa-ticket"></i>
+            Book Ticket
+        </a>
+
+        <a href="bookings.html">
+            <i class="fa-solid fa-list-check"></i>
+            My Bookings
+        </a>
+
+        <a href="profile.html" class="active">
+            <i class="fa-solid fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="../login.html" class="logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <h1 class="topbar-title">My Profile</h1>
+
+        <div class="topbar-user">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Ahmed Ali</span>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <div class="content">
+
+        <div class="profile-layout">
+
+            <!-- LEFT : PROFILE CARD -->
+
+            <div class="profile-sidebar">
+
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+
+                <h3>Ahmed Ali</h3>
+
+                <p class="profile-role">Passenger</p>
+
+                <div class="profile-stats">
+
+                    <div class="p-stat">
+                        <h4>12</h4>
+                        <span>Bookings</span>
+                    </div>
+
+                    <div class="p-stat">
+                        <h4>9</h4>
+                        <span>Completed</span>
+                    </div>
+
+                    <div class="p-stat">
+                        <h4>2</h4>
+                        <span>Upcoming</span>
+                    </div>
+
+                </div>
+
+                <div class="profile-info-list">
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        ahmed@example.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 9876543210
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Ahmedabad, Gujarat
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-calendar"></i>
+                        Joined: Jan 2025
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT : EDIT PROFILE -->
+
+            <div class="profile-form-area">
+
+                <!-- PERSONAL INFO -->
+
+                <div class="card">
+
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-user-pen"></i>
+                            Edit Personal Information
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="profileForm">
+
+                            <div class="form-grid-2">
+
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text"
+                                           value="Ahmed Ali"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email"
+                                           value="ahmed@example.com"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Mobile</label>
+                                    <input type="tel"
+                                           value="9876543210"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <input type="date"
+                                           value="1998-05-15"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender</label>
+                                    <select required>
+                                        <option selected>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text"
+                                           value="Ahmedabad">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea rows="3"
+                                          placeholder="Enter full address"
+                                >123, Main Road, Ahmedabad, Gujarat</textarea>
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                <i class="fa-solid fa-save"></i>
+                                Save Changes
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CHANGE PASSWORD -->
+
+                <div class="card">
+
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-lock"></i>
+                            Change Password
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="passwordForm">
+
+                            <div class="form-grid-2">
+
+                                <div class="form-group">
+                                    <label>Current Password</label>
+                                    <input type="password"
+                                           placeholder="Enter current password"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>New Password</label>
+                                    <input type="password"
+                                           placeholder="Enter new password"
+                                           required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Confirm Password</label>
+                                    <input type="password"
+                                           placeholder="Confirm new password"
+                                           required>
+                                </div>
+
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                <i class="fa-solid fa-key"></i>
+                                Update Password
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<script>
+
+document.getElementById('profileForm')
+    .addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('✅ Profile updated successfully!');
+});
+
+document.getElementById('passwordForm')
+    .addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('✅ Password changed successfully!');
+});
+
+</script>
+
+</body>
+</html>
