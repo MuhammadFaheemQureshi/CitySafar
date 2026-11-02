@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" role="img" aria-label="Illustration of a bus">
+ <rect width="620" height="260" rx="24" fill="#e8f3f1"/>
+ <path d="M80 197h455" stroke="#9bbfb9" stroke-width="3" stroke-dasharray="8 7"/>
+ <path d="M125 75h329c28 0 43 13 51 34l21 69a23 23 0 0 1-23 25H111a24 24 0 0 1-24-24v-65c0-22 17-39 38-39z" fill="#0d4957"/>
+ <path d="M121 98h327c16 0 23 6 29 21l9 29H112v-29c0-13 3-21 9-21z" fill="#c8e8e8"/>
+ <path d="M227 98v50M329 98v50M430 98v50" stroke="#0d4957" stroke-width="8"/>
+ <path d="M111 175h395" stroke="#e5ab55" stroke-width="8"/>
+ <circle cx="169" cy="199" r="27" fill="#153644"/><circle cx="169" cy="199" r="11" fill="#d3e3e3"/>
+ <circle cx="443" cy="199" r="27" fill="#153644"/><circle cx="443" cy="199" r="11" fill="#d3e3e3"/>
+ <rect x="486" y="155" width="26" height="13" rx="4" fill="#e5ab55"/><rect x="93" y="155" width="15" height="13" rx="4" fill="#e5ab55"/>
+</svg>

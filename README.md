@@ -1,2 +1,0 @@
-# CitySafar
-Semester Project
